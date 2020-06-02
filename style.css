@@ -1,0 +1,536 @@
+:root {
+  --primary: #f84848;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+.no-gutters {
+  margin-right: 0;
+  margin-left: 0;
+}
+
+body {
+  background-color: #efefef;
+}
+
+
+.shoe {
+  position: absolute;
+  width: 140%;
+  opacity: 0;
+  bottom: -60px;
+  right: -15px;
+  transform: rotate(-20deg);
+}
+
+.shoe.show {
+  -webkit-transition: opacity 1s ease-in;
+  -moz-transition: opacity 1s ease-in;
+  -o-transition: opacity 1s ease-in;
+  transition: opacity 1s ease-in;
+  transition-duration: 1s;
+  opacity: 1;
+
+}
+
+.container {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px;
+  overflow: hidden;
+}
+
+.card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 860px;
+}
+
+.logo {
+  position: absolute;
+  width: 50px;
+  left: 10px;
+  top: 10px;
+}
+
+.share {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  background-color: #fff;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  text-align: center;
+  font-size: 1.3rem;
+  text-decoration: none;
+  color: var(--primary);
+  transition: 5s;
+}
+
+.share:hover {
+  transform: scale(1.1);
+  -webkit-transition: 1s ease-in;
+  -moz-transition: 1s ease-in;
+  -o-transition: 1s ease-in;
+  transition: 1s ease-in;
+}
+
+.share i {
+  line-height: 50px;
+}
+
+.gblk {
+  position: absolute;
+  top: 120px;
+  left: 0px;
+  font-size: 9.8rem;
+  text-transform: uppercase;
+  line-height: 0.9;
+  color: #fff;
+  opacity: .1;
+}
+
+
+.info {
+  width: 100%;
+  background-color: #fff;
+  z-index: 1;
+  padding: 35px 40px;
+  box-shadow: 15px 0 35px rgba(0, 0, 0, 0.1), 0 -15px 35px rgba(0, 0, 0, 0.1), 0 15px 35px rgba(0, 0, 0, 0.1);
+}
+
+.shoeName {
+  padding: 0 0 10px 0;
+}
+
+.shoeName div {
+  display: flex;
+  align-items: center;
+}
+
+.shoeName div .big {
+  margin-right: 10px;
+  font-size: 2rem;
+  color: #333;
+  line-height: 1;
+}
+
+.shoeName div .new {
+  background-color: var(--primary);
+  text-transform: uppercase;
+  color: #fff;
+  padding: 3px 10px;
+  border-radius: 5px;
+}
+
+.shoeName .small {
+  font-weight: 500;
+  color: #444;
+  margin-top: 3px;
+  text-transform: capitalize;
+}
+
+.shoeName,
+.description,
+.color-container,
+.size-container {
+  border-bottom: 1px solid #dadada;
+}
+
+.description {
+  padding: 10 0;
+}
+
+.title {
+  color: #3a3a3a;
+  font-weight: 600;
+  font-size: 1.2rem;
+  text-transform: uppercase;
+}
+
+.text {
+  color: #555;
+  font-size: 17px;
+}
+
+.shoeBackground {
+  position: relative;
+  width: 100%;
+  height: 475px;
+  box-shadow: -15px 0 35px rgba(0, 0, 0, 0.1), 0 -15px 35px rgba(0, 0, 0, 0.1),
+    0 -15px 35px rgba(0, 0, 0, 0.1);
+}
+
+.gradients {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+}
+
+.gradient {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  z-index: -2;
+}
+
+.first {
+  z-index: 0;
+  animation: 1s width ease;
+}
+
+.second {
+  z-index: -1;
+}
+
+@keyframes width {
+  from {
+    width: 0%;
+  }
+
+  to {
+    -webkit-transition: 1s ease-in;
+    -moz-transition: 1s ease-in;
+    -o-transition: 1s ease-in;
+    transition: 1s ease-in;
+    width: 100%;
+  }
+}
+
+.gradient[color="black"] {
+  background-image: linear-gradient(45deg, #2b2527, #666);
+
+}
+
+.gradient[color="blue"] {
+  background-image: linear-gradient(45deg, #292e42, #6078ce);
+}
+
+.gradient[color="green"] {
+  background-image: linear-gradient(45deg, #003721, #28e06f);
+}
+
+.gradient[color="grey"] {
+  background-image: linear-gradient(45deg, #86847e, #e2dfd8);
+}
+
+.gradient[color="pink"] {
+  background-image: linear-gradient(45deg, #a77986, #e69db1);
+}
+
+.gradient[color="red"] {
+  background-image: linear-gradient(45deg, #d62926, #ee625f);
+}
+
+.gradient[color="white"] {
+  background-image: linear-gradient(45deg, #dad8d8, #7e7e7e);
+}
+
+.color-container {
+  padding: 10px 0;
+}
+
+.colors {
+  padding: 8px 0;
+  display: flex;
+  align-items: center;
+}
+
+.color {
+  width: 25px;
+  height: 22px;
+  border-radius: 50%;
+  margin: 0 10px;
+  border: 5px solid;
+  cursor: pointer;
+  transition: .5s;
+}
+
+
+.color[color="black"] {
+  background-color: #333;
+  border-color: #333;
+}
+
+.color[color="blue"] {
+  background-color: #0136af;
+  border-color: #0136af;
+}
+
+.color[color="green"] {
+  background-color: #11998e;
+  border-color: #11998e;
+}
+
+.color[color="grey"] {
+  background-color: #86847e;
+  border-color: #86847e;
+}
+
+.color[color="pink"] {
+  background-color: #e69db1;
+  border-color: #e69db1;
+}
+
+.color[color="red"] {
+  background-color: #d62926;
+  border-color: #d62926;
+}
+
+.color[color="white"] {
+  background-color: #dad8d8;
+  border-color: #dad8d8;
+}
+
+.color.active {
+  border-color: #fff;
+  box-shadow: 0 0 10px .5px rgba(0, 0, 0, 0.2);
+  transform: scale(1.1);
+}
+
+.size-container {
+  padding: 10px 0;
+  margin-bottom: 10px;
+}
+
+.sizes {
+  padding: 8px 0;
+  display: flex;
+  align-items: center;
+}
+
+.size {
+  width: 40px;
+  height: 40px;
+  border-radius: 6px;
+  background-color: #eee;
+  margin: 0 10px;
+  text-align: center;
+  line-height: 40px;
+  font-size: 1.1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: .3s;
+}
+
+.size.active {
+  background-color: var(--primary);
+  color: #fff;
+}
+
+.buy-price {
+  padding-top: 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.price {
+  color: #333;
+  display: flex;
+  align-items: flex-start;
+}
+
+.price h1 {
+  font-size: 2.1rem;
+  font-weight: 600;
+  line-height: 1;
+}
+
+.price em {
+  font-size: 1.4rem;
+  margin-right: 1px;
+}
+
+.buy {
+  padding: .7rem 1rem;
+  background-color: var(--primary);
+  text-decoration: none;
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 500;
+  font-size: 1.1rem;
+  transition: .5s;
+}
+
+.buy:hover {
+  transform: scale(1.1);
+}
+
+.buy i {
+  margin-right: 2px;
+}
+
+.foot a {
+  text-decoration: none;
+}
+
+.foot a:visited {
+  color: var(--primary);
+}
+
+@media (max-width: 1070px) {
+  .shoe {
+    width: 135%;
+  }
+}
+
+@media (max-width:1000px) {
+  .card {
+    flex-direction: column;
+    width: 100%;
+    box-shadow: 0 0 35px 1px rgba(0, 0, 0, 0.2);
+  }
+
+  card>div {
+    width: 100%;
+    box-shadow: none;
+  }
+
+  .shoe {
+    width: 110%;
+    transform: rotate(-5deg) translateY(-50%);
+    top: 40%;
+    right: -10%;
+  }
+
+  .gblk {
+    top: 20%;
+    left: 5%;
+    font-size: 17rem;
+  }
+
+}
+
+@media (max-width:800px) {
+  .gblk {
+    font-size: 15rem;
+  }
+}
+
+@media (max-width:750px) {
+  .gblk {
+    font-size: 12rem;
+  }
+}
+
+@media (max-width:600px) {
+  .gblk {
+    font-size: 10rem;
+  }
+
+  .share {
+    width: 40px;
+    height: 40px;
+  }
+
+  .share i {
+    font-size: 1rem;
+    line-height: 40px;
+  }
+
+  .logo {
+    width: 70px
+  }
+
+}
+
+@media (max-width:500px) {
+  .gblk {
+    font-size: 8rem;
+  }
+
+  .shoeName div .big {
+    font-size: 1.3rem;
+  }
+
+  .small {
+    font-size: .9rem;
+  }
+
+  .new {
+    padding: 2px 6px;
+    font-size: .9rem;
+  }
+
+  .title {
+    font-size: .9rem;
+  }
+
+  .text {
+    font-size: .8rem;
+  }
+
+  .buy {
+    padding: .5rem .8rem;
+  }
+
+  .price h1 {
+    font-size: 1.5rem;
+  }
+
+  .price em {
+    font-size: .9rem;
+  }
+
+  .size {
+    width: 30px;
+    height: 30px;
+    margin: 0 8px;
+    font-size: .9rem;
+    line-height: 30px;
+  }
+
+  .color {
+    margin: 0 10px;
+    width: 20px;
+    height: 20px;
+    border-width: 4px;
+  }
+
+  .share {
+    width: 35px;
+    height: 35px;
+    top: 10px;
+    right: 10px;
+  }
+
+  .share i {
+    font-size: .8rem;
+    line-height: 35px;
+  }
+
+  .logo {
+    width: 48px;
+    top: 10px;
+    left: 10px;
+  }
+
+  .info {
+    padding: 20px;
+  }
+}
+
+@media (max-width:480px) {
+  .buy i {
+    display: none;
+  }
+
+  .container {
+    padding: 20px;
+  }
+}
